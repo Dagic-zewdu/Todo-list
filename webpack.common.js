@@ -1,9 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: './src/app.js',
   plugins: [new HtmlWebpackPlugin({
     template: './src/index.html',
+    inject: 'body',
   })],
   module: {
     rules: [
@@ -16,8 +18,9 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].hash.[ext]',
-            outputPath: 'assets',
+            include: path.join(__dirname, 'src'),
+            name: '[name].[contentHash].[ext]',
+            outputPath: 'asset/',
           },
         },
       },
