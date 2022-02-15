@@ -1,0 +1,46 @@
+{
+  "name": "js-lintor-template",
+  "version": "1.0.0",
+  "description": "If you are not familiar with linters and GitHub Actions, read [root level README](../README.md).",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dagic-zewdu/js-lintor-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dagic-zewdu/js-lintor-template/issues"
+  },
+  "homepage": "https://github.com/Dagic-zewdu/js-lintor-template#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "css-loader": "^6.6.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "node-sass": "^7.0.1",
+    "sass-loader": "^12.5.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "webpack-merge": "^5.8.0"
+  }
+}
