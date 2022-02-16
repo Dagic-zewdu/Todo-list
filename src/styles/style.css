@@ -77,3 +77,11 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.center {
+  text-align: center;
+}
+
+.danger {
+  color: red;
+}
