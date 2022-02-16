@@ -38,7 +38,7 @@ Your app is ready to be deployed!
 
 ## Live Demo
 
-Check the [Live Demo](https://dagic-zewdu.github.io/awesome-books-with-classes/) deployed on github pages.
+Check the [Live Demo](https://dagic-zewdu.github.io/Todo-list/) deployed on github pages.
 ## Authors
 
 👤 **Dagic Zewdu**
