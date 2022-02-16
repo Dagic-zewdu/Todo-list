@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Ubuntu+Mono:ital@1&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 50%;
+  border: 1px solid #eee;
+  box-shadow: 5px 5px 5px 5px #888;
+  padding: 10px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
+}
+
+.input {
+  margin-top: 10px;
+  width: 96%;
+  padding: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  box-shadow: 5px 5px 5px 5px #888;
+}
+
+.todo-list {
+  list-style: none;
+  width: 90%;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #eee;
+}
+
+.description-container {
+  display: flex;
+  align-items: center;
+}
+
+.three-dots {
+  display: flex;
+  align-items: center;
+}
+
+.options {
+  height: 30px;
+  width: 30px;
+}
+
+.card-footer {
+  text-align: center;
+  width: 100%;
+  background-color: #eee;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
