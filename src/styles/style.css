@@ -13,18 +13,18 @@ body {
 }
 
 .card {
- width: 50%;
- border:1px solid #eee;
- box-shadow: 5px 5px 5px 5px #888888;
- padding: 10px;
+  width: 50%;
+  border: 1px solid #eee;
+  box-shadow: 5px 5px 5px 5px #888;
+  padding: 10px;
 }
 
 .card-header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #eee;
-padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  padding: 10px;
 }
 
 .input {
@@ -34,17 +34,18 @@ padding: 10px;
 }
 
 .icon {
- width: 20px;
- height: 20px;
- cursor: pointer;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
-.icon:hover{
-   box-shadow: 5px 5px 5px 5px #888888; 
+.icon:hover {
+  box-shadow: 5px 5px 5px 5px #888;
 }
+
 .todo-list {
-   list-style: none;
-   width: 90%; 
+  list-style: none;
+  width: 90%;
 }
 
 .list-item {
@@ -54,8 +55,8 @@ padding: 10px;
 }
 
 .description-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .three-dots {
@@ -65,14 +66,14 @@ padding: 10px;
 
 .options {
   height: 30px;
-  width: 30px;  
+  width: 30px;
 }
 
 .card-footer {
- text-align: center;
- width: 100%;
- background-color: #eee;
- padding: 10px;
- border: none;
- cursor: pointer;
+  text-align: center;
+  width: 100%;
+  background-color: #eee;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
