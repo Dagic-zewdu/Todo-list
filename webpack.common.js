@@ -18,7 +18,6 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            include: path.join(__dirname, 'src'),
             name: '[name].[contentHash].[ext]',
             outputPath: 'asset/',
           },
