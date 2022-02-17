@@ -46,6 +46,10 @@ body {
 .todo-list {
   list-style: none;
   width: 90%;
+  max-height: 450px;
+  overflow: scroll;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
 }
 
 .list-item {
@@ -57,11 +61,15 @@ body {
 .description-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .three-dots {
   display: flex;
   align-items: center;
+  height: 50px;
+  cursor: pointer;
+  padding-right: 20px;
 }
 
 .options {
@@ -84,4 +92,20 @@ body {
 
 .danger {
   color: red;
+  margin-right: 10px;
+}
+
+.success {
+  color: green;
+  cursor: pointer;
+}
+
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }

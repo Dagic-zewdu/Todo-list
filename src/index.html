@@ -13,14 +13,16 @@
         <div class="card">
             <div class="card-header">
                 <p class="title">Add todo list</p>
-                <img src="https://icon-library.com/images/reset-icon-png/reset-icon-png-2.jpg" alt="" class="icon">
+                <div class="flex">
+                    <p class="danger" id="clear-uncompleted"></p>
+                    <img src="https://icon-library.com/images/reset-icon-png/reset-icon-png-2.jpg" alt="" class="icon">
+                </div>
             </div>
             <div class="card-body">
                 <form id="add-form" action="#">
                     <input type="text" required class="input" placeholder="Add todo item">
                 </form>
                 <ul class="todo-list">
-
                 </ul>
             </div>
             <button id="clear-completed" class=" card-footer">
