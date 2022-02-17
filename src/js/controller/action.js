@@ -38,6 +38,10 @@ export const removeUnCompleted = (list) => {
   return todos;
 };
 
+export const RemoveTodo = (id, todos) => {
+  const Todos = ArrangeList(todos.filter((todo) => todo.index.toString() !== id));
+  return Todos;
+};
 export const editTodos = (id, description, todos) => {
   const todo = todos.find((t) => t.index.toString() === id);
   const Todo = { ...todo, description };

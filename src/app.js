@@ -1,6 +1,6 @@
 import {
   AddRemoveEditForm,
-  AddtoList, editTodos, removeCompleted, removeUnCompleted, setCompleted,
+  AddtoList, editTodos, removeCompleted, RemoveTodo, removeUnCompleted, setCompleted,
 } from './js/controller/action';
 import RenderList from './js/controller/render-list';
 import { getFromStorage } from './js/controller/storage';
@@ -18,7 +18,7 @@ const addEventListeners = () => {
   const checkButton = selectMultipleDom('p.success');
   const editForms = selectMultipleDom('form.edit-form');
   const editInputs = selectMultipleDom('input.edit-input');
-
+  const deleteButton = selectMultipleDom('button.trash');
   checkButton.forEach((button) => {
     button.addEventListener('click', () => {
       Todos = setCompleted(button.id, false, Todos);
@@ -58,6 +58,14 @@ const addEventListeners = () => {
           addEventListeners();
         }
       });
+    });
+  });
+  deleteButton.forEach((button) => {
+    button.addEventListener('click', () => {
+      Todos = RemoveTodo(button.id, Todos);
+      editInputForm = AddRemoveEditForm(button.id, editInputForm);
+      RenderList(Todos, editInputForm);
+      addEventListeners();
     });
   });
 };

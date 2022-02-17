@@ -32,9 +32,12 @@ const RenderList = (todos, editInputForm) => {
    `;
       }
       // edit form
-      li += `<li>
+      li += `<li class="edit-item">
       <form id='${todo.index}' class='${CheckForm(todo.index, editInputForm) ? 'edit-form' : 'edit-form none'}'>
       <input type="text" required class="input edit-input" id='${todo.index}' /> 
+       <button class="trash" type='button' id='${todo.index}'>
+       &#x1F5D1;
+       </button>
       </form>
       </li>`;
     });
