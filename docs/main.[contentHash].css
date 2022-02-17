@@ -45,6 +45,10 @@ body {
 .todo-list {
   list-style: none;
   width: 90%;
+  max-height: 450px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .list-item {
@@ -56,11 +60,15 @@ body {
 .description-container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .three-dots {
   display: flex;
   align-items: center;
+  height: 50px;
+  cursor: pointer;
+  padding-right: 20px;
 }
 
 .options {
@@ -75,5 +83,57 @@ body {
   padding: 10px;
   border: none;
   cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+
+.danger {
+  color: red;
+  margin-right: 10px;
+}
+
+.success {
+  color: green;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.edit-form {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.edit-input {
+  width: 90%;
+}
+
+button.trash {
+  border: none;
+  flex: 1;
+  margin-left: 10px;
+  width: 10%;
+  border-radius: 5px;
+}
+
+button.trash:hover {
+  background-color: red;
+  color: white;
+  fill: white;
+}
+
+.none {
+  display: none;
+}
+
+.edit-item {
+  transition: 2s ease-out;
 }
 

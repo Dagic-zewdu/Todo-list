@@ -3,6 +3,5 @@ export const selectMultipleDom = (selector) => document.querySelectorAll(selecto
 
 export const Input = selectDom('input.input');
 export const form = selectDom('#add-form');
-export const checkboxs = selectMultipleDom('input.checkbox');
 export const resetIcon = selectDom('img.icon');
 export const btnClearCompleted = selectDom('button#clear-completed');
