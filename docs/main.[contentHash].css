@@ -99,13 +99,41 @@ body {
   cursor: pointer;
 }
 
-.none {
-  display: none;
-}
-
 .flex {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.edit-form {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.edit-input {
+  width: 90%;
+}
+
+button.trash {
+  border: none;
+  flex: 1;
+  margin-left: 10px;
+  width: 10%;
+  border-radius: 5px;
+}
+
+button.trash:hover {
+  background-color: red;
+  color: white;
+  fill: white;
+}
+
+.none {
+  display: none;
+}
+
+.edit-item {
+  transition: 2s ease-out;
 }
 
