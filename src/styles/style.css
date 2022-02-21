@@ -1,22 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Ubuntu+Mono:ital@1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Ubuntu+Mono:ital@1&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Ubuntu Mono', monospace;
-}
-
-#main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.card {
-  width: 50%;
-  border: 1px solid #eee;
-  box-shadow: 5px 5px 5px 5px #888;
-  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 .card-header {
@@ -136,4 +122,35 @@ button.trash:hover {
 
 .edit-item {
   transition: 2s ease-out;
+}
+
+@media screen and (max-width: 640px) {
+  #main {
+    display: flex;
+    width: 100%;
+    padding: 30px 10px 10px 10px;
+  }
+
+  .card {
+    width: 90%;
+    border: 1px solid #eee;
+    box-shadow: 5px 5px 5px 5px #888;
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .card {
+    width: 50%;
+    border: 1px solid #eee;
+    box-shadow: 5px 5px 5px 5px #888;
+    padding: 10px;
+  }
 }
