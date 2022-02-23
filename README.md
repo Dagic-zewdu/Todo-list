@@ -11,7 +11,7 @@
 
 -webpack
 ## Getting Started
- 
+
 This project is configure with webpack.
 ## Available Scripts
 
@@ -28,6 +28,10 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ### `npm run build`
+
+To run Unit test run:
+
+### `npm test`
 
 Builds the app for production to the `dist` folder.\
 It correctly bundles the app in production mode and optimizes the build for the best performance.
