@@ -21,6 +21,9 @@ describe('Adding to storage', () => {
       test('index key should be number', () => {
         expect(typeof todo.index === 'number').toBeTruthy();
       });
+      test('Should remove the todo', () => {
+        expect(RemoveTodo('1', todos)).toHaveLength(todos.length - 1);
+      });
     });
   });
 });
