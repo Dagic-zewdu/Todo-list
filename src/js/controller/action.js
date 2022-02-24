@@ -17,7 +17,6 @@ const setCompleted = (id, value, list) => {
 
 const removeCompleted = (list) => {
   const todos = ArrangeList(list.filter((todo) => !todo.completed));
-  AddtoStorage(todos);
   return todos;
 };
 
@@ -46,7 +45,6 @@ const editTodos = (id, description, todos) => {
   const todo = todos.find((t) => t.index.toString() === id);
   const Todo = { ...todo, description };
   const newTodos = todos.map((t) => (t.index.toString() === id ? Todo : t));
-  AddtoStorage(newTodos);
   return newTodos;
 };
 

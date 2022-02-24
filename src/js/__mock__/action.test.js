@@ -1,4 +1,6 @@
-const { AddtoList, RemoveTodo } = require('../controller/action');
+const {
+  AddtoList, RemoveTodo, editTodos, setCompleted, removeCompleted,
+} = require('../controller/action');
 const { randomString } = require('../utils/random.id');
 
 describe('Adding to storage', () => {
@@ -25,5 +27,21 @@ describe('Adding to storage', () => {
   });
   test('Should remove the todo', () => {
     expect(RemoveTodo('1', todos)).toHaveLength(todos.length - 1);
+  });
+
+  test('Test for the "Edit tasks" function', () => {
+    const editedTodos = editTodos('1', 'blabla', todos);
+    const editedTodo = editedTodos.find((todo) => todo.index === 1);
+    expect(editedTodo.description === 'blabla').toBeTruthy();
+  });
+  test('Test to check the status of a task "true/false"', () => {
+    const editedTodos = setCompleted('1', true, todos);
+    const editedTodo = editedTodos.find((todo) => todo.index === 1);
+    expect(editedTodo.completed === true).toBeTruthy();
+  });
+  test('Test the "remove all completed tasks" function', () => {
+    const removedTodos = removeCompleted(todos);
+    const Todos = removedTodos.filter((todo) => todo.completed);
+    expect(Todos.length > 0).toBeFalsy();
   });
 });
