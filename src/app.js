@@ -3,7 +3,7 @@ import {
   AddtoList, editTodos, removeCompleted, RemoveTodo, removeUnCompleted, setCompleted,
 } from './js/controller/action';
 import RenderList from './js/controller/render-list';
-import { getFromStorage } from './js/controller/storage';
+import { AddtoStorage, getFromStorage } from './js/controller/storage';
 import {
   btnClearCompleted, form, Input, resetIcon, selectMultipleDom,
 } from './js/dom/selector';
@@ -52,6 +52,7 @@ const addEventListeners = () => {
         if (input.id === form.id) {
           const { value } = input;
           const todos = editTodos(input.id, value, Todos);
+          AddtoStorage(todos);
           Todos = todos;
           editInputForm = AddRemoveEditForm(input.id, editInputForm);
           RenderList(Todos, editInputForm);
@@ -85,6 +86,7 @@ addEventListeners();
 // clear completed button
 btnClearCompleted.addEventListener('click', () => {
   const todos = removeCompleted(Todos);
+  AddtoStorage(todos);
   RenderList(todos, editInputForm);
   addEventListeners();
   Todos = todos;
