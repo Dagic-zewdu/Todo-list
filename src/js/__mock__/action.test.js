@@ -1,4 +1,5 @@
-const { AddtoList, RemoveTodo } = require('../controller/action');
+const { keys } = require('prelude-ls');
+const { AddtoList, RemoveTodo, editTodos } = require('../controller/action');
 const { randomString } = require('../utils/random.id');
 
 describe('Adding to storage', () => {
@@ -27,3 +28,14 @@ describe('Adding to storage', () => {
     expect(RemoveTodo('1', todos)).toHaveLength(todos.length - 1);
   });
 });
+
+describe('Edit my to do List', () => {
+  let theEdit = [];
+  for(let e = 0; e < todos.length; e += 1) {
+    theEdit = editTodos(todos[e].index, todos[e].description, todos)
+  }
+
+  test('Should change the edit', () => {
+    expect(editTodos(theEdit.index, randomString(theEdit[e]).description, todos)).not.toEqual(todos.description);
+  })
+})
