@@ -10,10 +10,10 @@ describe('Adding to storage', () => {
     const keys = Object.keys(todo);
     keys.forEach((key) => {
       test('keys should be index or completed or description ', () => {
-        expect(key === 'index' || key !== 'completed' || key !== 'description').toBeTruthy();
+        expect(key === 'index' || key === 'completed' || key === 'description').toBeTruthy();
       });
       test('Description should not be null', () => {
-        expect(todo.description.length !== 0).toBeTruthy();
+        expect(todo.description.length > 0).toBeTruthy();
       });
       test('The completed task should have initial value false', () => {
         expect(todo.completed).toBeFalsy();
