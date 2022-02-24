@@ -29,14 +29,19 @@ describe('Adding to storage', () => {
     expect(RemoveTodo('1', todos)).toHaveLength(todos.length - 1);
   });
 
-  test('The changed index and description should have the save value', () => {
+  test('Test for the "Edit tasks" function', () => {
     const editedTodos = editTodos('1', 'blabla', todos);
     const editedTodo = editedTodos.find((todo) => todo.index === 1);
     expect(editedTodo.description === 'blabla').toBeTruthy();
   });
-  test('The updated task with the index completed should have a value that is provided', () => {
+  test('Test to check the status of a task "true/false"', () => {
     const editedTodos = setCompleted('1', true, todos);
     const editedTodo = editedTodos.find((todo) => todo.index === 1);
     expect(editedTodo.completed === true).toBeTruthy();
+  });
+  test('Test the "remove all completed tasks" function', () => {
+    const removedTodos = removeCompleted(todos);
+    const Todos = removedTodos.filter((todo) => todo.completed);
+    expect(Todos.length > 0).toBeFalsy();
   });
 });
